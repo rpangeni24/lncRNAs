@@ -1,11 +1,11 @@
- #!/usr/bin/env python3 
+#!/usr/bin/env python3 
 import pandas as pd
 # Read the tables from .txt files
 # Adjust 'sep' parameter based on the delimiter used in your files (e.g., ',' for CSV, '\t' for tab-delimited files)
 table1 = pd.read_csv('lncrna_gsc.txt', sep='\t')  # Replace '\t' with your actual delimiter
 table2 = pd.read_csv('normal.txt', sep='\t')
    
-  # Assuming both tables have at least one column
+ # Assuming both tables have at least one column
  # Table1 and Table2's first column will be used for matching
  matched_table2 = table2[table2['TargetID'].isin(table1['TargetID'])]
  
